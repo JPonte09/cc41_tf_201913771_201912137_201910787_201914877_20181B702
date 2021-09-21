@@ -1,1 +1,7 @@
-# cc41_tf_201913771_201912137_201910787_201914877_20181B702
+# Complejidad Algorítmica 2021-02
+## Integrantes
+- Sebastián Martin Trujillo Hilares
+- Julissa Karol Ponte Isminio
+- Julio Enrique Barrios Aedo
+- Paolo Manoel Pinzás R.
+- Antony Sthif Carrasco Cunya
