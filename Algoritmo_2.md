@@ -15,5 +15,5 @@ la cual contiene `k + 1` o menos arcos.
 
 ## Analisis Asintótico
 Como necesitamos relajar los tiempos máximos de bordes `V - 1`, la complejidad del tiempo de este algoritmo será igual a `O (V * E)` donde `E` denota el número de bordes, 
-si usamos la lista de adyacencia para representar el gráfico. Sin embargo, si se usa una matriz de adyacencia para representar el gráfico, la complejidad del tiempo será `O (V ^ 3)`.
-La razón es que podemos iterar a través de todos los bordes en el tiempo O `(E)` cuando se usa la lista de adyacencia, pero toma el tiempo `O (V ^ 2)` cuando se usa la matriz de adyacencia.
+si usamos la lista de adyacencia para representar el gráfico. Sin embargo, si se usa una matriz de adyacencia para representar el gráfico, la complejidad del tiempo será `O (V ^ 3)`. La razón es que podemos iterar a través de todos los bordes en el tiempo O `(E)` cuando se usa la lista de adyacencia, pero toma el tiempo `O (V ^ 2)` cuando se usa la matriz
+de adyacencia.
