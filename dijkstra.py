@@ -1,4 +1,4 @@
-#----------Implementacion del algortimo de Dijkstra para el grafo generado----------
+#----------IMPLEMENTACIÓN DEL ALGORITMO DE DIJKSTRA PARA EL GRAFO GENERADO----------
 
 import math
 
@@ -73,3 +73,21 @@ dijkstra(grafoCiudad, 1, 227)
 
 dijkstra(grafoCiudad, 586, 1540)
 # [586, 1540]
+
+
+#----------IMPLEMENTACIÓN DEL ALGORITMO DE DIJKSTRA DESDE CADA ALMACÉN A TODOS LOS PUNTOS DE ENTREGA----------
+
+almacenes = []
+puntos_de_entrega = []
+
+for i,_ in enumerate(ciudad):
+  if ciudad[i][2] == 'A':
+    almacenes.append(ciudad[i])
+
+for j,_ in enumerate(ciudad):
+  if ciudad[j][2] == 'P':
+    puntos_de_entrega.append(ciudad[j])
+
+for i in range(len(almacenes)):
+  for j in range(len(puntos_de_entrega)):
+    dijkstra(grafoCiudad, almacenes[i][0], puntos_de_entrega[j][0])
