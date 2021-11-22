@@ -65,6 +65,7 @@ for i,_ in enumerate(ciudad):
       grafoCiudad[ciudad[i][0]].append(ciudad[i][1])
 escribir_archivo(None,grafoCiudad,'grafoCiudad.csv')
 
+#----------ALGORTIMO 3- ---Julio.. ----------
 
 def prim(G):
   n = len(G)
