@@ -1,4 +1,7 @@
-#-----IMPLEMENTACIÓN DE PRIMERA VERSIÓN DEL ALGORITMO BELLMAN FORD------
+#-----------------------------ALGORITMO 2-----------------------------
+#--------------ELABORADO POR JULISSA KAROL PONTE ISMINIO--------------
+#-----IMPLEMENTACIÓN DE PRIMERA VERSIÓN DEL ALGORITMO BELLMAN FORD----
+
 import math
 
 def bellmanFord(G, s):
