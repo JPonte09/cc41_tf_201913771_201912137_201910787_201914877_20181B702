@@ -72,16 +72,20 @@ def prim(G):
   visited = [False]*n
   path = [-1]*n
   q = [(0, 0)]
+  cost = [math.inf]*n
   while q:
     _, u = hq.heappop(q)
     if not visited[u]:
       visited[u] = True
       for v in G[u]:
-            if not visited[v]:
-              path[v] = u
-              hq.heappush(q, (1, v))
+        if v != 'P' and v != 'A':
+          for w in G[u]:
+            if w != 'P' and w != 'A':
+              if not visited[v] and w < cost[v]:
+                cost[v] = w
+                path[v] = u
+                hq.heappush(q, (w, v))
 
-  return path
+  return path, cost
 
-
-prim(grafoCiudad)
+prim(ciudad)
