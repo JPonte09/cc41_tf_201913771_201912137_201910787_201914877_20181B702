@@ -14,6 +14,5 @@ def floydWarshall(G, tamano):
                 pesoAcumulado = Costos[i][k] + Costos[k][j]
                 if Costos[i][j] > pesoAcumulado:
                     Costos[i][j] = pesoAcumulado
-                    Padres[i][j] = k
-           
+                    Padres[i][j] = k       
     return Padres
