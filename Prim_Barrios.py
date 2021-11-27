@@ -6,7 +6,7 @@ import graphviz as gv
 import pandas as pd
 import heapq as hq
 import math
-
+import numpy as np
 
 def leer_archivo(archivo):
   archivoCsv = list() 
@@ -65,27 +65,54 @@ for i,_ in enumerate(ciudad):
       grafoCiudad[ciudad[i][0]].append(ciudad[i][1])
 escribir_archivo(None,grafoCiudad,'grafoCiudad.csv')
 
-#----------ALGORTIMO 3- ---Julio.. ----------
+#----------ALGORTIMO 3- ---Julio-----------
 
-def prim(G):
-  n = len(G)
+def prim(Grafo, x, y):
+  n = len(Grafo)
   visited = [False]*n
   path = [-1]*n
-  q = [(0, 0)]
-  cost = [math.inf]*n
-  while q:
-    _, u = hq.heappop(q)
-    if not visited[u]:
-      visited[u] = True
-      for v in G[u]:
-        if v != 'P' and v != 'A':
-          for w in G[u]:
-            if w != 'P' and w != 'A':
-              if not visited[v] and w < cost[v]:
-                cost[v] = w
-                path[v] = u
-                hq.heappush(q, (w, v))
+  primero = [(x,y)]
+  almacen = []
+  for i in range(n):
+    almacen.append([0]*2)
+  costo = [math.inf]*n
+  cont2 = 0
+  cont1 = 0
+  while primero:
+    _, padre = hq.heappop(primero)
 
-  return path, cost
+    if not visited[padre]:
+      visited[padre] = True
+      for valor in Grafo[padre]:
+        if valor != 'P' and valor != 'A':
+          for valor2 in Grafo[padre]:
+            if valor2 != 'P' and valor2 != 'A':
+              if not visited[valor] and valor2 < costo[valor]:
+                costo[valor] = valor2
+                path[valor] = padre
+                hq.heappush(primero, (valor2, valor))
+              
+              if Grafo[cont2][2] == 'A':
+                almacen[cont1][0] = path[valor]
+                almacen[cont1][1] = costo[valor]
+                cont1 = cont1 +1 
+          
+      cont2 = cont2 + 1
 
-prim(ciudad)
+  return path, costo, almacen
+
+
+
+pat, co, almacen = prim(ciudad, 1, 0)
+
+almacen1 = []
+for i in almacen:
+  if i not in almacen1 :
+    almacen1.append(i)
+
+
+print("[ Almacen Path, Costo ]")
+print(almacen1)
+print("************************************************")
+print("Para hayar puntos y almacenes con costos cortos:")
+print(pat)
