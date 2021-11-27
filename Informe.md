@@ -131,3 +131,4 @@ Dijkstra(ciudad, almacenes)
 * Finalmente el uso como tal de la plataforma de GitHub nos permitio conocer más acerca del uso de Issues y de los commits, lo cual nos ayudara muchisimo en futuros proyectos, ya sean proyectos pequeños o grandes.
 
 # Bibliografía
+* Favtutor, Floyd Warshall Algorithm (Python) | Dynamic Programming.  https://favtutor.com/blogs/floyd-warshall-algorithm
