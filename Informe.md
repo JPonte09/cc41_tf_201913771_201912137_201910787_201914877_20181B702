@@ -61,8 +61,69 @@ Entonces, el algoritmo de Dijkstra realiza O(n^2) operaciones (sumas y comparaci
 ## Algoritmo de Bellman-Ford
 
 ## Algoritmo de Prim
+<pre>
+def prim(Grafo, x, y):
+  n = len(Grafo)
+  visited = [False]*n
+  path = [-1]*n
+  primero = [(x,y)]
+  almacen = []
+  for i in range(n):
+    almacen.append([0]*2)
+  costo = [math.inf]*n
+  cont2 = 0
+  cont1 = 0
+  while primero:
+    _, padre = hq.heappop(primero)
+
+    if not visited[padre]:
+      visited[padre] = True
+      for valor in Grafo[padre]:
+        if valor != 'P' and valor != 'A':
+          for valor2 in Grafo[padre]:
+            if valor2 != 'P' and valor2 != 'A':
+              if not visited[valor] and valor2 < costo[valor]:
+                costo[valor] = valor2
+                path[valor] = padre
+                hq.heappush(primero, (valor2, valor))
+              
+              if Grafo[cont2][2] == 'A':
+                almacen[cont1][0] = path[valor]
+                almacen[cont1][1] = costo[valor]
+                cont1 = cont1 +1 
+          
+      cont2 = cont2 + 1
+
+  return path, costo, almacen
+</pre>
 
 ## Algortimo de Dijkstra
+<pre>
+def Dijkstra(G, s):
+  visited = {}
+  path = {}
+  cost = {}
+  for key in g.keys():
+    visited[k] = False
+    path[k] = None
+    cost[k] = math.inf
+
+  cost[s] = 0
+  queue = [(s, 0)]
+  while queue:
+    u, g_u = hq.heappop(queue)
+    if not visited[u]:
+      visited[u] = True        
+      for v in G[u]:
+        f = G_u + 1
+        if f < cost[v]:
+          cost[v] = f
+          path[v] = u
+          hq.heappush(queue, (v, f))
+  return path
+
+Dijkstra(ciudad, almacenes)
+</pre>
 
 # Conclusiones
 
