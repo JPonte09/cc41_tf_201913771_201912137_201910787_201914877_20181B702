@@ -13,10 +13,10 @@ El problema de enrutamiento de vehiculos (VRP) consiste en que se debe determina
 <img src="https://github.com/JPonte09/cc41_tf_201913771_201912137_201910787_201914877_20181B702/blob/main/images/vrp_imagen.png" width="400">
 
 # Objetivos
-• Desarrollar la competencia general de razonamiento cuantitativo y la competencia específica de uso de técnicas y herramientas acorde a los objetivos del curso.
-• Desarrollar algoritmos que permitan resolver completa o parcialmente el problema de enrutamiento de vehiculos.
-• Determinar la importancia de la aplicación de algoritmos eficientes a la hora de resolver un problema.
-• Analizar la eficiencia y complejidad de los algoritmos planteados.
+* Desarrollar la competencia general de razonamiento cuantitativo y la competencia específica de uso de técnicas y herramientas acorde a los objetivos del curso.
+* Desarrollar algoritmos que permitan resolver completa o parcialmente el problema de enrutamiento de vehiculos.
+* Determinar la importancia de la aplicación de algoritmos eficientes a la hora de resolver un problema.
+* Analizar la eficiencia y complejidad de los algoritmos planteados.
 
 # Marco Teorico
 ## Algoritmo de Floyd-Warshall
