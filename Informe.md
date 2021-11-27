@@ -7,6 +7,7 @@
 - Julio Enrique Barrios Aedo
 - Paolo Manoel Pinzás R.
 
+
 # Introducción
 El problema de enrutamiento de vehículos (VRP) consiste en que se debe determinar el conjunto de caminos o rutas para un grupo de vehículos con base en uno o más depósitos para varias ciudades o clientes geográficamente dispersos en una ciudad. El objetivo del VRP es ofrecer un conjunto de clientes con demandas conocidas sobre rutas de vehículos de costo mínimo que se originan y terminan en un depósito.
 
