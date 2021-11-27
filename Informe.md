@@ -126,5 +126,8 @@ Dijkstra(ciudad, almacenes)
 </pre>
 
 # Conclusiones
+*Tanto los algoritmos Bellman-Ford, Prim, Dijkstra y Floyd-Warshall son adecuados para la resolucion de este problema.
+*Gracias a este trabajo, pudimos aprender masa sobre Phyton como lenguaje de programacion ,el cual hasta el principio del semestre era algo nuevo para nosotros.
+*Finalmente el uso como tal de la plataforma de GitHub nos permitio conocer más acerca del uso de Issues y de los commits, lo cual nos ayudara muchisimo en futuros proyectos, ya sean proyectos pequeños o grandes.
 
 # Bibliografía
