@@ -55,6 +55,120 @@ La complejidad computacional del algoritmo de Dijkstra se puede calcular contand
 
 Entonces, el algoritmo de Dijkstra realiza O(n^2) operaciones (sumas y comparaciones) para determinar la longitud del camino más corto entre dos vértices de un grafo ponderado simple, conexo y no dirigido con n vértices.
 
+# Implementaciones generales
+## Creación de los almacenes y puntos de entrega
+
+<pre>
+import numpy as np
+import numpy.random as npr
+import csv
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def generarAlmacenes(cantidad):
+  almacenes = npr.randint(0, 1000, (cantidad, 2), dtype=np.int)
+  return almacenes
+
+def generarPuntos(cantidad):
+  puntos = npr.randint(0, 1000, (cantidad, 2), dtype=np.int)
+  return puntos
+
+almacenes = generarAlmacenes(50)
+puntos = generarPuntos(2500)
+
+for i, _ in enumerate(puntos):
+  while puntos[i] in almacenes:
+    puntos[i] = npr.randint(0, 1000, (1, 2), dtype=np.int)
+
+np.savetxt('puntos.csv', puntos, delimiter=",", comments="")
+np.savetxt('almacenes.csv', almacenes, delimiter=",", comments="")
+
+almacenes = pd.read_csv("almacenes.csv", header=None).to_numpy()
+puntos = pd.read_csv("puntos.csv", header=None).to_numpy()
+plt.figure(figsize=(15, 15))
+plt.scatter(almacenes[:, 0], almacenes[:, 1], 2, c="red")
+plt.scatter(puntos[:, 0], puntos[:, 1], 2, c="blue")
+plt.show()
+</pre>
+
+## Creación de secciones
+
+<pre>
+def dist(a, b):
+  xa, ya = a
+  xb, yb = b
+  return abs(xa - xb) + abs(ya - yb)
+
+groups = [0]*len(puntos)
+
+for i, a in enumerate(puntos):
+  group = 0
+  mindist = dist(a, almacenes[0])
+  for j, b in enumerate(almacenes):
+    d = dist(a, b)
+    if d < mindist:
+      mindist = d
+      group = j
+  groups[i] = group
+
+counts = [0]*len(almacenes)
+
+for g in groups:
+  counts[g] += 1
+
+print(groups[:20])
+
+puntos2 = np.c_[puntos, groups]
+print(puntos2[:10])
+
+dfpuntos = pd.DataFrame(puntos2)
+dfpuntos.head()
+
+plt.subplots(figsize=(15, 15))
+
+show = [0, 1, 2, 4]
+
+plt.scatter(almacenes[:, 0], almacenes[:, 1])
+for alm in show:
+  dftemp = dfpuntos[dfpuntos[2] == alm]
+  plt.scatter(dftemp[0], dftemp[1])
+
+plt.subplots(figsize=(15, 15))
+
+plt.scatter(almacenes[1, 0], almacenes[1, 1])
+
+dftemp = dfpuntos[dfpuntos[2] == 4]
+plt.scatter(dftemp[0], dftemp[1])
+
+def escribirArchivo(cabezera, datos, archivo):
+  with open(archivo, 'w') as a:
+    write = csv.writer(a)
+    if cabezera != None: write.writerow(cabezera)
+    write.writerows(datos)
+
+ciudad = list()
+ciudad.extend(puntos2)
+ciudad.sort(key = lambda x: (x[0], x[1])) #Ordenar de mayor a menor los puntos
+escribirArchivo(None, ciudad, 'ciudad.csv')
+</pre>
+
+## Creación del grafo de la ciudad
+
+<pre>
+import math
+import graphviz as gv
+import pandas as pd
+
+ciudad = pd.read_csv("ciudad.csv", header=None).to_numpy()
+
+print(ciudad[:40])
+
+grafoCiudad=[[] for _ in range(len(ciudad))]
+
+for i,_ in enumerate(ciudad):
+    grafoCiudad[int(ciudad[i][0])].append(int(ciudad[i][1]))
+</pre>
+
 # Implementación de los Algortimos
 ## Algoritmo de Floyd-Warshall
 <pre>
