@@ -27,7 +27,7 @@ for i,_ in enumerate(ciudad):
       grafoCiudad[ciudad[i][0]].append(ciudad[i][1])
 
 
-#----------Algoritmo 4 - Dijkstra----------
+#----------Algoritmo 4 - Dijkstra-----------
 
 
 def Dijkstra(G, s):
