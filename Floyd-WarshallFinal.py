@@ -1,7 +1,6 @@
 def generarGrafoFloyd(G):
     n=len(G)
     grafo=[[] for _ in range(n)]
-    
     i=0
     r=[]
     for _, nodo, _ in G:
