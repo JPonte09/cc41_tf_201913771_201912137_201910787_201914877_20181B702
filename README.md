@@ -13,4 +13,4 @@
 - Enlace: https://youtu.be/4Zl3adNGPOc
 
 ## Video de exposición (TF)
-- Enlace: 
+- Enlace: https://youtu.be/g9tbz6DKgqM
