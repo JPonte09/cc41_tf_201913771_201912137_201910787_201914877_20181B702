@@ -19,17 +19,17 @@ N° | Actividades | Responsables :man_technologist: | Labels :label: | Fecha de 
 13 | Agregar la información de dataset de puntos_entrega.csv | Sebastian Trujillo | `Enhancement` | Hito 1
 14 | Crear grafo para la ciudad de 1000x1000 cuadras | Sebastian Trujillo | `Enhancement` | Hito 1
 15 | Agregar la información de dataset de almacenes.csv | Sebastian Trujillo | `Enhancement` | Hito 1
-16 | Implementar Dijkstra desde cada almacén a todos los puntos de entrega enhancement | Julissa Ponte | `Enhancement` | Hito 1
-17 | Implementar algoritmo dijkstra al grafo generado | Sebastian Trujillo | `Enhancement` | Hito 1
-18 |  Incluir URL de video en youtube (u otro servicio) no listado (compartido por URL, privado) en el archivo README.md de un video elaborado de máximo 1 minuto explicando actividades realizadas | Paolo Pinzás | `Documentation` | Hito 2
-19 | Definir algoritmo integrante 5 en alto nivel con posible análisis asintótico | Paolo Pinzás | `Documentation` | Hito 2
-20 | Definir algoritmo integrante 2 en alto nivel con posible análisis asintótico | Paolo Pinzás | `Documentation` | Hito 2
-21 | Definir algoritmo integrante 3 en alto nivel con posible análisis asintótico | Paolo Pinzás | `Documentation` | Hito 2
-22 | Definir espacio de búsqueda, estado inicial, posible estado final, transiciones | Julissa Ponte, Julio Barrios | `Documentation` | Hito 2
-23 | Definir algoritmo integrante 1 en alto nivel con posible análisis asintótico | Julissa Ponte, Julio Barrios | `Documentation` | Hito 2
-24 | Definir algoritmo integrante 4 en alto nivel con posible análisis asintótico | Julissa Ponte, Julio Barrios | `Documentation` | Hito 2
-25 | Generar descripción de datos de vehículos de entrega indicando según su criterio, cálculo de costo | Julissa Ponte, Julio Barrios | `Documentation` | Hito 2
-26 | Generar primera versión de almacenes.csv | Sebastian Trujillo | `Enhancement` | Hito 1
-27 | Generar primera versión de puntos_entrega.csv | Sebastian Trujillo | `Enhancement` | Hito 1
-28 | Producir reporte de actividades | Julissa Ponte, Julio Barrios | `Documentation` | Hito 2
-29 | Agregar lista de integrantes en README.md | Julissa Ponte, Julio Barrios | `Documentation` | Hito 2
+16 | Implementar Dijkstra desde cada almacén a todos los puntos de entrega enhancement | Julissa Ponte | `Enhancement` | Hito 2
+17 | Implementar algoritmo dijkstra al grafo generado | Julissa Ponte | `Enhancement` | Hito 2
+18 |  Incluir URL de video en youtube (u otro servicio) no listado (compartido por URL, privado) en el archivo README.md de un video elaborado de máximo 1 minuto explicando actividades realizadas | Paolo Pinzás | `Documentation` | TP
+19 | Definir algoritmo integrante 5 en alto nivel con posible análisis asintótico | Antony Carrasco (retirado) | `Documentation` | TP
+20 | Definir algoritmo integrante 2 en alto nivel con posible análisis asintótico | Julissa Ponte | `Documentation` | TP
+21 | Definir algoritmo integrante 3 en alto nivel con posible análisis asintótico | Julio Barrios | `Documentation` | TP
+22 | Definir espacio de búsqueda, estado inicial, posible estado final, transiciones | Julissa Ponte, Julio Barrios | `Documentation` | TP
+23 | Definir algoritmo integrante 1 en alto nivel con posible análisis asintótico | Sebastian Trujillo | `Documentation` | TP
+24 | Definir algoritmo integrante 4 en alto nivel con posible análisis asintótico | Paolo Pinzás | `Documentation` | TP
+25 | Generar descripción de datos de vehículos de entrega indicando según su criterio, cálculo de costo | Julissa Ponte, Julio Barrios | `Documentation` | TP
+26 | Generar primera versión de almacenes.csv | Sebastian Trujillo | `Enhancement` | TP
+27 | Generar primera versión de puntos_entrega.csv | Sebastian Trujillo | `Enhancement` | TP
+28 | Producir reporte de actividades | Julissa Ponte | `Documentation` | TP
+29 | Agregar lista de integrantes en README.md | Julissa Ponte | `Documentation` | TP
