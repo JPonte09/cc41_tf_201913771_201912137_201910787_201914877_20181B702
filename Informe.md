@@ -80,8 +80,8 @@ for i, _ in enumerate(puntos):
   while puntos[i] in almacenes:
     puntos[i] = npr.randint(0, 1000, (1, 2), dtype=np.int)
 
-np.savetxt('puntos.csv', puntos, delimiter=",", comments="")
-np.savetxt('almacenes.csv', almacenes, delimiter=",", comments="")
+np.savetxt('puntos.csv', puntos, fmt="%i", delimiter=",", comments="")
+np.savetxt('almacenes.csv', almacenes, fmt="%i", delimiter=",", comments="")
 
 almacenes = pd.read_csv("almacenes.csv", header=None).to_numpy()
 puntos = pd.read_csv("puntos.csv", header=None).to_numpy()
@@ -126,7 +126,7 @@ dfpuntos.head()
 
 plt.subplots(figsize=(15, 15))
 
-show = [0, 1, 2, 4]
+show = groups[:4]
 
 plt.scatter(almacenes[:, 0], almacenes[:, 1])
 for alm in show:
@@ -137,7 +137,7 @@ plt.subplots(figsize=(15, 15))
 
 plt.scatter(almacenes[1, 0], almacenes[1, 1])
 
-dftemp = dfpuntos[dfpuntos[2] == 4]
+dftemp = dfpuntos[dfpuntos[2] == show[1]]
 plt.scatter(dftemp[0], dftemp[1])
 
 def escribirArchivo(cabezera, datos, archivo):
