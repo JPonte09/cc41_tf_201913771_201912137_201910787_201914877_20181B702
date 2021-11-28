@@ -16,7 +16,6 @@ N° | Actividades | Responsables :man_technologist: | Labels :label: | Fecha de 
 10 | Definir algoritmo integrante 5 en alto nivel con posible análisis asintótico | Antony Carrasco | `Documentation` | 02/10/2021
 11 | Producir reporte de actividades | Julissa Ponte | `Documentation` | 01/10/2021
 12 | Incluir URL de video en youtube (u otro servicio) no listado (compartido por URL, privado) en el archivo README.md de un video elaborado de máximo 1 minuto explicando actividades realizadas | Paolo Pinzás | `Documentation` | 03/10/2021
-
 13 | Agregar la información de dataset de puntos_entrega.csv | Sebastian Trujillo | `Enhancement` | Hito 1
 14 | Crear grafo para la ciudad de 1000x1000 cuadras | Sebastian Trujillo | `Enhancement` | Hito 1
 15 | Agregar la información de dataset de almacenes.csv | Sebastian Trujillo | `Enhancement` | Hito 1
