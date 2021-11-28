@@ -16,3 +16,4 @@
 
 ## Video de demostracion
 - Enlace: https://youtu.be/kkiv64DTvIE
+- Enlace Colaboratory: https://colab.research.google.com/drive/1K4e4VqHABL6Q1-AuJ_B8_J-HOIQIB1gu?usp=sharing (El archivo se encuentra en el repositorio "DemostracionTF")
